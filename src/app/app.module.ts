@@ -10,9 +10,23 @@ import { HomeComponent } from './components/home/home.component';
 import { ROUTES } from './app.routes';
 import { RouterModule } from '@angular/router';
 
+import { HttpClientModule } from '@angular/common/http';
+import { LoadingComponent } from './components/shared/loading/loading.component';
+import { FooterComponent } from './components/shared/footer/footer.component';
+
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, HomeComponent],
-  imports: [BrowserModule, RouterModule.forRoot(ROUTES, { useHash: true })],
+  declarations: [
+    AppComponent,
+    NavbarComponent,
+    HomeComponent,
+    LoadingComponent,
+    FooterComponent
+  ],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    RouterModule.forRoot(ROUTES, { useHash: true })
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -1,4 +1,4 @@
-<section class="hero ">
+<section class="hero is-medium  is-info is-fullheight-with-navbar">
   <div class="hero-body">
     <div class="container has-text-centered">
       <div class="column is-half is-offset-one-quarter">
@@ -8,21 +8,37 @@
           fascinating universe is featured, along with a brief explanation
           written by a professional astronomer.
         </h2>
+        <br />
+        <br />
+        <br />
+        <a class="scroll  " href="#nasa" data-speed="1000"
+          ><i
+            class="fas fa-angle-double-down fa-2x animated infinite  slideOutDown"
+          ></i>
+        </a>
       </div>
     </div>
   </div>
 </section>
 
-<div class="container">
+<div class="container has-text-centered ">
+  <!-- <br />
+  <br />
+  <br />
+  <br /> -->
+  <div *ngIf="loading"><i class="fas fa-spinner fa-5x fa-spin"></i></div>
+  <!-- <br />
+  <br />
+  <br />
+  <br /> -->
+</div>
+<div class="container card-apod" id="nasa">
   <div class="columns">
     <div class="column is-half is-offset-one-quarter">
-      <div class="card">
+      <div class="card " *ngIf="!loading">
         <div class="card-image">
           <figure class="image is-4by3">
-            <img
-              src="https://bulma.io/images/placeholders/1280x960.png"
-              alt="Placeholder image"
-            />
+            <img src="{{ apod.url }}" alt="Placeholder image" />
           </figure>
         </div>
         <div class="card-content">
@@ -30,25 +46,37 @@
             <div class="media-left">
               <figure class="image is-48x48">
                 <img
-                  src="https://bulma.io/images/placeholders/96x96.png"
+                  src="../../../assets/img/nasa.png"
                   alt="Placeholder image"
                 />
               </figure>
             </div>
             <div class="media-content">
-              <p class="title is-4">John Smith</p>
-              <p class="subtitle is-6">@johnsmith</p>
+              <p class="title is-4">{{ apod.title }}</p>
+              <p class="subtitle is-6">{{ apod.copyright }}</p>
             </div>
           </div>
 
           <div class="content">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-            nec iaculis mauris. <a>@bulmaio</a>. <a href="#">#css</a>
-            <a href="#">#responsive</a> <br />
-            <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+            <p>{{ apod.explanation }}</p>
+            <br />
+            <!-- 
+            
+            <span><a class="button">Button</a></span> -->
+            <div class="columns">
+              <div class="column">
+                <p class="has-text-weight-light">{{ apod.date }}</p>
+              </div>
+              <div class="column has-text-right">
+                <a [href]="apod.hdurl" target="_blank" class="button is-info"
+                  >Ver en HD</a
+                >
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+<br />

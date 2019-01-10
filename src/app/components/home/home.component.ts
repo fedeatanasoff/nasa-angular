@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApodService } from '../../services/apod.service';
 
 @Component({
   selector: 'app-home',
@@ -6,10 +7,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  apod: any = {};
+  loading: boolean;
 
-  constructor() { }
+  constructor(private servicio: ApodService) {
+    this.loading = true;
 
-  ngOnInit() {
+    this.servicio.getApod().subscribe(
+      (data: any) => {
+        this.loading = false;
+        this.apod = data;
+        console.log(this.apod);
+      },
+      errorApod => {
+        console.log(errorApod);
+        this.loading = false;
+      }
+    );
   }
 
+  ngOnInit() {}
 }

@@ -1,0 +1,30 @@
+footer {
+  background-color: #fff;
+  padding: 6rem 1.5rem 6rem;
+}
+
+.c-1 {
+  text-align: left;
+}
+
+.c-2 {
+  text-align: right;
+}
+
+.icon {
+  margin: 5px;
+  transition: all 0.4s ease-in-out;
+  color: hsl(0, 0%, 29%);
+}
+
+.icon:hover {
+  /* color: rgb(26, 93, 141); */
+  filter: opacity(0.6);
+}
+
+@media (max-width: 768px) {
+  .c-1,
+  .c-2 {
+    text-align: center;
+  }
+}
