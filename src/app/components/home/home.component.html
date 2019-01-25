@@ -30,8 +30,8 @@
     <div class="column is-half is-offset-one-quarter">
       <div class="card " *ngIf="!loading">
         <div class="card-image">
-          <figure class="image is-4by3">
-            <img src="{{ apod.url }}" alt="Placeholder image" />
+          <figure class="imagen">
+            <img src="{{ apod.url }}" alt="Placeholder image" width="100%" />
           </figure>
         </div>
         <div class="card-content">
@@ -53,9 +53,7 @@
           <div class="content">
             <p>{{ apod.explanation }}</p>
             <br />
-            <!-- 
-            
-            <span><a class="button">Button</a></span> -->
+
             <div class="columns">
               <div class="column">
                 <p class="has-text-weight-light">{{ apod.date }}</p>

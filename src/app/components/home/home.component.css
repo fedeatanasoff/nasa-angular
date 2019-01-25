@@ -2,6 +2,10 @@
   padding-top: 50px;
 }
 
+.imagen {
+  width: 100% !important;
+}
+
 @media (max-width: 768px) {
   .has-text-right {
     text-align: left !important;
