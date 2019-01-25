@@ -1,3 +1,9 @@
 .card-apod {
   padding-top: 50px;
 }
+
+@media (max-width: 768px) {
+  .has-text-right {
+    text-align: left !important;
+  }
+}

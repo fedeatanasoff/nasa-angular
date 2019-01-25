@@ -10,6 +10,7 @@ export class FooterComponent implements OnInit {
   footer: any = {
     instagram: 'https://www.instagram.com/fedeatanasoff/',
     github: 'https://github.com/fedeatanasoff',
+    linkedin: 'https://www.linkedin.com/in/fede-atanasoff/',
     nombre: 'fd_atanasoff'
   };
 

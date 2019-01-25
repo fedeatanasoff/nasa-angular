@@ -9,9 +9,11 @@ import { ApodService } from '../../services/apod.service';
 export class HomeComponent implements OnInit {
   apod: any = {};
   loading: boolean;
+  error: boolean;
 
   constructor(private servicio: ApodService) {
     this.loading = true;
+    this.error = false;
 
     this.servicio.getApod().subscribe(
       (data: any) => {
@@ -22,6 +24,7 @@ export class HomeComponent implements OnInit {
       errorApod => {
         console.log(errorApod);
         this.loading = false;
+        this.error = true;
       }
     );
   }

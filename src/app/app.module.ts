@@ -13,6 +13,7 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { LoadingComponent } from './components/shared/loading/loading.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
+import { ErrorComponent } from './components/shared/error/error.component';
 
 @NgModule({
   declarations: [
@@ -20,13 +21,10 @@ import { FooterComponent } from './components/shared/footer/footer.component';
     NavbarComponent,
     HomeComponent,
     LoadingComponent,
-    FooterComponent
+    FooterComponent,
+    ErrorComponent
   ],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    RouterModule.forRoot(ROUTES, { useHash: true })
-  ],
+  imports: [BrowserModule, HttpClientModule, RouterModule.forRoot(ROUTES)],
   providers: [],
   bootstrap: [AppComponent]
 })

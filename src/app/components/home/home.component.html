@@ -21,18 +21,11 @@
   </div>
 </section>
 
-<div class="container has-text-centered ">
-  <!-- <br />
-  <br />
-  <br />
-  <br /> -->
-  <div *ngIf="loading"><i class="fas fa-spinner fa-5x fa-spin"></i></div>
-  <!-- <br />
-  <br />
-  <br />
-  <br /> -->
+<div class="container has-text-centered " id="nasa">
+  <app-loading *ngIf="loading"></app-loading>
+  <app-error *ngIf="error"></app-error>
 </div>
-<div class="container card-apod" id="nasa">
+<div *ngIf="!loading && !error" class="container card-apod">
   <div class="columns">
     <div class="column is-half is-offset-one-quarter">
       <div class="card " *ngIf="!loading">
