@@ -11,7 +11,7 @@ export class FooterComponent implements OnInit {
     instagram: 'https://www.instagram.com/fedeatanasoff/',
     github: 'https://github.com/fedeatanasoff',
     linkedin: 'https://www.linkedin.com/in/fede-atanasoff/',
-    nombre: 'Federico Atanasoff'
+    nombre: 'fd-atanasoff'
   };
 
   constructor() {}

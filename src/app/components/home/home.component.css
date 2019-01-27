@@ -10,4 +10,13 @@
   .has-text-right {
     text-align: left !important;
   }
+  .title {
+    font-size: 1.5rem;
+  }
+}
+
+.scroll {
+  position: absolute;
+  left: 47.5%;
+  top: 85%;
 }
