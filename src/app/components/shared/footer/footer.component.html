@@ -3,18 +3,38 @@
     <div class="columns">
       <div class="column c-1">
         <p class="">
-          <i class="far fa-copyright"></i> Copyright {{ fecha }}
-          <i class="fas fa-code"></i> {{ footer.nombre }}
+          <i class="far fa-copyright"></i> {{ fecha }}
+          <i class="fas fa-code"></i>
+          <a
+            class="footer-copy"
+            [href]="footer.web"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {{ footer.nombre }}</a
+          >
         </p>
       </div>
       <div class="column c-2 has-text-grey-dark">
-        <a [href]="footer.github" target="_blank" class="icon"
+        <a
+          [href]="footer.github"
+          target="_blank"
+          class="icon"
+          rel="noopener noreferrer"
           ><i class="fab fa-github-square fa-2x"></i>
         </a>
-        <a [href]="footer.linkedin" target="_blank" class="icon"
+        <a
+          [href]="footer.linkedin"
+          target="_blank"
+          class="icon"
+          rel="noopener noreferrer"
           ><i class="fab fa-linkedin fa-2x"></i>
         </a>
-        <a [href]="footer.instagram" target="_blank" class="icon"
+        <a
+          [href]="footer.instagram"
+          target="_blank"
+          class="icon"
+          rel="noopener noreferrer"
           ><i class="fab fa-instagram fa-2x"></i>
         </a>
       </div>
