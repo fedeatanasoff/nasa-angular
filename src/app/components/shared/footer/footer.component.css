@@ -24,6 +24,12 @@ footer {
 
 .footer-copy {
   color: hsl(0, 0%, 29%);
+  transition: all 0.3s ease-in-out;
+}
+
+.footer-copy:hover {
+  color: hsl(0, 0%, 10%);
+  /* font-weight: 500; */
 }
 
 @media (max-width: 768px) {

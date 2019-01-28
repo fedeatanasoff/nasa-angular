@@ -11,8 +11,8 @@ export class FooterComponent implements OnInit {
     instagram: 'https://www.instagram.com/fedeatanasoff/',
     github: 'https://github.com/fedeatanasoff',
     linkedin: 'https://www.linkedin.com/in/fede-atanasoff/',
-    nombre: 'fd-atanasoff', 
-    web:'https://fd-atanasoff.netlify.com'
+    nombre: 'fd-atanasoff',
+    web: 'https://fd-atanasoff.netlify.com'
   };
 
   constructor() {}
