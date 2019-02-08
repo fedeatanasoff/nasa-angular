@@ -17,6 +17,6 @@
 
 .scroll {
   position: absolute;
-  left: 47.5%;
-  top: 85%;
+  left: 50%;
+  bottom: 40px;
 }
